@@ -1,0 +1,17 @@
+.hero-has-bg-image {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.showcase-has-image-1 {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.contact-has-bg-image {
+  background-image: url('hero.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
