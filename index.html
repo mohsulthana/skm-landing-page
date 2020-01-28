@@ -450,17 +450,7 @@
       </div>
     </section>
 
-    <script>
-      $('#armada').click(function() {
-        $('.modal').addClass('is-active');
-      });
-      $('#modal-close').click(function() {
-        $('.modal').removeClass("is-active");
-      })
-    </script>
-
-
-    <div class="modal animated fadeIn">
+    <div class="modal">
       <div class="modal-background"></div>
       <div class="modal-content">
         <div class="box">
@@ -519,8 +509,17 @@
           </div>
         </div>
       </div>
-      <button class="modal-close" id="modal-close"></button>
+      <button class="modal-close is-large" aria-label="close"></button>
     </div>
+
+    <script>
+      $('#armada').click(function() {
+        $('.modal').addClass('is-active');
+      });
+      $('.modal-close').click(function() {
+        $('.modal').removeClass("is-active");
+      })
+    </script>
 
     <!--  contact -->
     <section class="hero is-primary is-medium contact-has-bg-image" data-aos="zoom-in-up">
