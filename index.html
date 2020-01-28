@@ -451,15 +451,26 @@
     </section>
 
     <script>
-      $('#armada').click(function() {
-        $('.modal').addClass('is-active');
+      // $('#armada').click(function() {
+      //   $('.modal').addClass('is-active');
+      // });
+      // $('#modal-close').click(function() {
+      //   $('.modal').removeClass("is-active");
+      // })
+      document.querySelector('#armada').addEventListener('click', function(event) {
+        event.preventDefault();
+        var modal = document.querySelector('.modal');  // assuming you have only 1
+        var html = document.querySelector('html');
+        modal.classList.add('is-active');
+        html.classList.add('is-clipped');
+
+        modal.querySelector('.modal-background').addEventListener('click', function(e) {
+          e.preventDefault();
+          modal.classList.remove('is-active');
+          html.classList.remove('is-clipped');
+        });
       });
-      $('#modal-close').click(function() {
-        $('.modal').removeClass("is-active");
-      })
     </script>
-
-
     <div class="modal animated fadeIn">
       <div class="modal-background"></div>
       <div class="modal-content">
