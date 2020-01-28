@@ -7,12 +7,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/bulma-modal-fx/dist/css/modal-fx.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-spaced is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="index.html">
           <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
@@ -50,7 +52,7 @@
       </div>
     </nav>
 
-    <section class="hero has-text-centered is-primary is-fullheight-with-navbar hero-has-bg-image">
+    <section class="hero has-text-centered is-primary is-fullheight-with-navbar hero-has-bg-image  animated fadeIn">
       <div class="hero-body">
         <div class="container">
           <h1 class="title">
@@ -68,7 +70,7 @@
       </div>
     </section>
 
-    <section class="section has-text-centered is-fullheight">
+    <section class="section has-text-centered is-fullheight" data-aos="fade-down">
       <div class="hero-head">
         <div class="container">
           <h1 id="about" class="title has-text-danger">
@@ -87,8 +89,8 @@
     <section class="hero is-medium is-danger">
       <div class="hero-body">
         <div class="container">
-          <div class="columns is-mobile has-text-centered">
-            <div class="column has-text-left">
+          <div class="columns has-text-centered">
+            <div class="column has-text-left" data-aos="fade-right">
               <h2 class="title">
                 Visi
               </h2>
@@ -96,7 +98,7 @@
                 Menjadi perusahaan jasa transportir BBM Industri yang profesional, berkualitas, terdepan, dan terpercaya di Sumatera Selatan.
               </h2>
             </div>
-            <div class="column has-text-left">
+            <div class="column has-text-left" data-aos="fade-left">
               <h2 class="title">
                 Misi
               </h2>
@@ -120,7 +122,33 @@
       </div>
     </section>
 
-    <section class="section is-medium">
+    <!-- trigger button -->
+<!-- <span class="button modal-button" data-target="modal-id">Open modal</span> -->
+
+<!-- related modal with fx class "modal-fx-fadeInScale" -->
+<div id="modal-id" class="modal modal-fx-fadeInScale">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      Hello
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+                  <script>
+                    $('#pangkalan').on('click', function() {
+                      $('#pangkalanModal').addClass('is-active');
+                    })
+                  </script>
+
+<div class="modal" id="pangkalanModal">
+  <div class="modal-background"></div>
+  <div class="modal-content">
+    Pangkalan
+  </div>
+  <button class="modal-close is-large" aria-label="close"></button>
+</div>
+
+    <section class="section is-medium" data-aos="fade-up">
       <div class="hero-head">
         <div class="container">
           <h1 class="title has-text-danger has-text-centered" id="service">
@@ -133,10 +161,10 @@
       </div>
       <div class="hero-body">
         <div class="container">
-          <div class="columns is-mobile">
-            <div class="column">
+          <div class="columns">
+            <div class="column" data-aos="fade-right">
               <div class="card">
-                <div class="card-image">
+                <div class="card-image" >
                   <figure class="image is-4by3">
                     <img src="pangkalan.jpg" alt="Placeholder image" style="object-fit: cover;">
                   </figure>
@@ -152,10 +180,15 @@
                       <p class="title is-4">Pangkalan PT. KSM</p>
                     </div>
                   </div>
+                  <div class="content">
+                    <a class="button is-danger is-medium has-shadow" id="pangkalan" style="width: 100%">
+                      Penawaran Kami
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="column">
+            <div class="column" data-aos="fade-down">
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -173,10 +206,15 @@
                       <p class="title is-4">Dermaga TBBM</p>
                     </div>
                   </div>
+                  <div class="content">
+                    <a class="button is-danger is-medium has-shadow" style="width: 100%">
+                      Penawaran Kami
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="column">
+            <div class="column" data-aos="fade-left">
               <div class="card">
                 <div class="card-image">
                   <figure class="image is-4by3">
@@ -194,6 +232,11 @@
                       <p class="title is-4">Dermaga Pertamina</p>
                     </div>
                   </div>
+                  <div class="content">
+                    <a class="button is-danger is-medium has-shadow" style="width: 100%">
+                      Penawaran Kami
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -205,21 +248,21 @@
     <section class="hero is-fullheight">
       <div class="hero-body">
         <div class="is-grey">
-          <div class="columns is-mobile has-text-left" style="min-height: 70vh;">
-            <div class="column" style="margin: auto 0px;">
+          <div class="columns has-text-left" style="min-height: 70vh;" data-aos="fade-up-right">
+            <div class="column" style="margin: auto 0px;" >
               <div class="title">We welcome</div>
               <div class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas temporibus aperiam vel explicabo ipsum pariatur, soluta, doloremque debitis, aut deserunt veniam ut quidem nihil libero? Quidem pariatur saepe eveniet modi.</div>
             </div>
             <div class="column showcase-has-image-1"></div>
           </div>
-          <div class="columns is-mobile has-text-left" style="min-height: 70vh;">
+          <div class="columns has-text-left" style="min-height: 70vh;" data-aos="fade-up-left">
             <div class="column showcase-has-image-2"></div>
             <div class="column" style="margin: auto 0px;">
               <div class="title">We welcome</div>
               <div class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas temporibus aperiam vel explicabo ipsum pariatur, soluta, doloremque debitis, aut deserunt veniam ut quidem nihil libero? Quidem pariatur saepe eveniet modi.</div>
             </div>
           </div>
-          <div class="columns is-mobile has-text-left" style="min-height: 70vh;">
+          <div class="columns has-text-left" style="min-height: 70vh;" data-aos="fade-up-right">
             <div class="column" style="margin: auto 0px;">
               <div class="title">We welcome</div>
               <div class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas temporibus aperiam vel explicabo ipsum pariatur, soluta, doloremque debitis, aut deserunt veniam ut quidem nihil libero? Quidem pariatur saepe eveniet modi.</div>
@@ -230,7 +273,7 @@
       </div>
     </section>
 
-    <section class="hero">
+    <section class="hero" data-aos="zoom-in-up">
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title has-text-danger">
@@ -255,7 +298,7 @@
       </div>
     </section>
 
-    <section class="section is-light has-carousel" style="background-color: #e5e5e5;">
+    <section class="section is-light has-carousel" style="background-color: #e5e5e5;" data-aos="zoom-in-up">
       <div class="hero-head">
         <div class="container has-text-centered">
           <h1 class="title has-text-danger" id="partner">
@@ -306,8 +349,99 @@
       </div>
     </section>
 
+    <section class="section is-light has-carousel" data-aos="zoom-in-up">
+      <div class="hero-head">
+        <div class="container has-text-centered">
+          <h1 class="title has-text-danger" id="partner">
+            Gallery
+          </h1>
+          <h1 class="subtitle">
+            Kami sedang menjalani kemitraan dan memberikan pelayanan terbaik dengan perusahaan tingkat nasional
+          </h1>
+        </div>
+      </div>
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="columns is-multiline">
+            <div class="column is-one-quarter-desktop is-half-tablet">
+              <div class="card">
+                  <div class="card-image">
+                      <figure class="image is-3by2">
+                        <img src="https://unsplash.it/300/200/?random&pic=1" alt="">
+                      </figure>
+                  </div>
+              </div>
+            </div>
+            <div class="column is-one-quarter-desktop is-half-tablet">
+              <div class="card">
+                  <div class="card-image">
+                      <figure class="image is-3by2">
+                        <img src="https://unsplash.it/300/200/?random&pic=1" alt="">
+                      </figure>
+                  </div>
+              </div>
+            </div>
+            <div class="column is-one-quarter-desktop is-half-tablet">
+              <div class="card">
+                  <div class="card-image">
+                      <figure class="image is-3by2">
+                        <img src="https://unsplash.it/300/200/?random&pic=1" alt="">
+                      </figure>
+                  </div>
+              </div>
+            </div>
+            <div class="column is-one-quarter-desktop is-half-tablet">
+              <div class="card">
+                  <div class="card-image">
+                      <figure class="image is-3by2">
+                        <img src="https://unsplash.it/300/200/?random&pic=1" alt="">
+                      </figure>
+                  </div>
+              </div>
+            </div>
+            <div class="column is-one-quarter-desktop is-half-tablet">
+              <div class="card">
+                  <div class="card-image">
+                      <figure class="image is-3by2">
+                        <img src="https://unsplash.it/300/200/?random&pic=1" alt="">
+                      </figure>
+                  </div>
+              </div>
+            </div>
+            <div class="column is-one-quarter-desktop is-half-tablet">
+              <div class="card">
+                  <div class="card-image">
+                      <figure class="image is-3by2">
+                        <img src="https://unsplash.it/300/200/?random&pic=1" alt="">
+                      </figure>
+                  </div>
+              </div>
+            </div>
+            <div class="column is-one-quarter-desktop is-half-tablet">
+              <div class="card">
+                  <div class="card-image">
+                      <figure class="image is-3by2">
+                        <img src="https://unsplash.it/300/200/?random&pic=1" alt="">
+                      </figure>
+                  </div>
+              </div>
+            </div>
+            <div class="column is-one-quarter-desktop is-half-tablet">
+              <div class="card">
+                  <div class="card-image">
+                      <figure class="image is-3by2">
+                        <img src="https://unsplash.it/300/200/?random&pic=1" alt="">
+                      </figure>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!--  contact -->
-    <section class="hero is-primary is-medium contact-has-bg-image">
+    <section class="hero is-primary is-medium contact-has-bg-image" data-aos="zoom-in-up">
       <div class="hero-body">
         <div class="container">
           <div class="columns is-mobile has-text-left">
@@ -342,7 +476,10 @@
       </div>
     </footer>
 		<script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    AOS.init();
 		bulmaCarousel.attach('#carousel-demo', {
 			slidesToScroll: 1,
       slidesToShow: 4,
