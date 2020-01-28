@@ -6,6 +6,8 @@
   background-image: url('ship.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
+  height: auto;
 }
 
 .showcase-has-image-1 {

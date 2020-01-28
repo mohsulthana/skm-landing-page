@@ -11,14 +11,18 @@
     <script src="assets/jquery341.js"></script>
     <script defer src="assets/fa531.js"></script>
     <link rel="stylesheet" href="assets/bulma_carousel.css">
-    <link rel="stylesheet" href="assets/modal-fx.min.css" />
     <link rel="stylesheet" href="assets/animate.min.css">
+    <link rel="shortcut icon" type="image/png" href="logo-SKM.PNG"/>
+    <link rel="shortcut icon" type="image/png" href="logo-SKM.PNG"/
     <link href="aos.css" rel="stylesheet">
   </head>
 
   <style>
     .navbar-item img {
       max-height: 4rem;
+    }
+    .modal-content {
+      width: 800px !important;
     }
   </style>
 
@@ -132,32 +136,6 @@
         </div>
       </div>
     </section>
-
-    <!-- trigger button -->
-<!-- <span class="button modal-button" data-target="modal-id">Open modal</span> -->
-
-<!-- related modal with fx class "modal-fx-fadeInScale" -->
-<div id="modal-id" class="modal modal-fx-fadeInScale">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-      Hello
-    </div>
-    <button class="modal-close is-large" aria-label="close"></button>
-</div>
-
-                  <script>
-                    $('#pangkalan').on('click', function() {
-                      $('#pangkalanModal').addClass('is-active');
-                    })
-                  </script>
-
-<div class="modal" id="pangkalanModal">
-  <div class="modal-background"></div>
-  <div class="modal-content">
-    Pangkalan
-  </div>
-  <button class="modal-close is-large" aria-label="close"></button>
-</div>
 
     <section class="section is-medium" data-aos="fade-up">
       <div class="hero-head">
@@ -309,7 +287,7 @@
       </div>
     </section>
 
-    <section class="section is-light has-carousel" style="background-color: #e5e5e5;" data-aos="zoom-in-up">
+    <section class="section is-light has-carousel" style="background-color: #f8f8f8;" data-aos="zoom-in-up">
       <div class="hero-head">
         <div class="container has-text-centered">
           <h1 class="title has-text-danger" id="partner">
@@ -452,6 +430,98 @@
       </div>
     </section>
 
+    <section class="section is-danger" data-aos="zoom-in-up">
+      <div class="hero-head">
+        <div class="container has-text-centered">
+          <h1 class="title has-text-danger" id="partner">
+            Armada
+          </h1>
+          <h1 class="subtitle">
+            Kami sedang menjalani kemitraan dan memberikan pelayanan terbaik dengan perusahaan tingkat nasional
+          </h1>
+        </div>
+      </div>
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <a class="button is-danger has-shadow" id="armada">
+            Daftar Armada
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      $('#armada').click(function() {
+        $('.modal').addClass('is-active');
+      });
+      $('#modal-close').click(function() {
+        $('.modal').removeClass("is-active");
+      })
+    </script>
+
+
+    <div class="modal animated fadeIn">
+      <div class="modal-background"></div>
+      <div class="modal-content">
+        <div class="box">
+          <div class="table-container">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Nama</th>
+                  <th>Jenis</th>
+                  <th>Tahun</th>
+                  <th>Produk</th>
+                  <th>Kapasitas</th>
+                  <th>Ukuran</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1.</td>
+                  <td>Sederhana Citra Gemilang 01</td>
+                  <td>Tongkang Bermotor</td>
+                  <td>2005</td>
+                  <td>Solar/Premium</td>
+                  <td>180 KL</td>
+                  <td>57 GT</td>
+                </tr>
+                <tr>
+                  <td>2.</td>
+                  <td>Sederhana Citra Gemilang 02</td>
+                  <td>Tongkang Bermotor</td>
+                  <td>2005</td>
+                  <td>Solar/Premium</td>
+                  <td>110 KL</td>
+                  <td>30 GT</td>
+                </tr>
+                <tr>
+                  <td>3.</td>
+                  <td>Sederhana Citra Gemilang 03</td>
+                  <td>Tongkang Bermotor</td>
+                  <td>2014</td>
+                  <td>Solar/Premium</td>
+                  <td>300 KL</td>
+                  <td>151 GT</td>
+                </tr>
+                <tr>
+                  <td>4.</td>
+                  <td>Matahari</td>
+                  <td>Tongkang</td>
+                  <td>2008</td>
+                  <td>Solar/Premium</td>
+                  <td>200 KL</td>
+                  <td>50 GT</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <button class="modal-close" id="modal-close"></button>
+    </div>
+
     <!--  contact -->
     <section class="hero is-primary is-medium contact-has-bg-image" data-aos="zoom-in-up">
       <div class="hero-body">
@@ -488,7 +558,6 @@
       </div>
     </footer>
 		<script src="assets/bulma_carousel.js"></script>
-    <script type="text/javascript" src="assets/modal-fx.min.js"></script>
     <script src="assets/aos.js"></script>
   <script>
     AOS.init();
