@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="assets/bulma_carousel.css">
     <link rel="stylesheet" href="assets/animate.min.css">
     <link rel="shortcut icon" type="image/png" href="logo-SKM.PNG"/>
-    <link rel="shortcut icon" type="image/png" href="logo-SKM.PNG"/
+    <link rel="shortcut icon" type="image/png" href="logo-SKM.PNG"/>
     <link href="aos.css" rel="stylesheet">
   </head>
 
@@ -534,42 +534,32 @@
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>1.</td>
-                  <td>Sederhana Citra Gemilang 01</td>
-                  <td>Tongkang Bermotor</td>
-                  <td>2005</td>
-                  <td>Solar/Premium</td>
-                  <td>180 KL</td>
-                  <td>57 GT</td>
-                </tr>
-                <tr>
-                  <td>2.</td>
-                  <td>Sederhana Citra Gemilang 02</td>
-                  <td>Tongkang Bermotor</td>
-                  <td>2005</td>
-                  <td>Solar/Premium</td>
-                  <td>110 KL</td>
-                  <td>30 GT</td>
-                </tr>
-                <tr>
-                  <td>3.</td>
-                  <td>Sederhana Citra Gemilang 03</td>
-                  <td>Tongkang Bermotor</td>
-                  <td>2014</td>
-                  <td>Solar/Premium</td>
-                  <td>300 KL</td>
-                  <td>151 GT</td>
-                </tr>
-                <tr>
-                  <td>4.</td>
-                  <td>Matahari</td>
-                  <td>Tongkang</td>
-                  <td>2008</td>
-                  <td>Solar/Premium</td>
-                  <td>200 KL</td>
-                  <td>50 GT</td>
-                </tr>
+                <?php  
+                $arr = 
+          [["Sederhana Citra Gemilang 01","Tongkang Bermotor","2005","Solar/Premium","180 KL","57 GT"],
+            ["Sederhana Citra Gemilang 02","Tongkang Bermotor","2005","Solar/Premium","110 KL","30 GT"],
+            ["Sederhana Citra Gemilang 03","Tongkang Bermotor","2014","Solar/Premium","300 KL","151 GT"],
+            ["Matahari","Tongkang","2008","Solar/Premium","200 KL","55 GT"],
+            ["Matahari 02","Tongkang","2009","Solar/Premium","400 KL","120 GT"],
+            ["Matahari 03","Tongkang","2010","Solar/Premium","200 KL","60 GT"],
+            ["Matahari 04","Tongkang","2011","Solar/Premium","230 KL","68 GT"],
+            ["Matahari 05","Tongkang","2015","Solar/Premium","500 KL","187 GT"],
+            ["Matahari 06","Tongkang","2015","Solar/Premium","500 KL","187 GT"],
+            ["Bulan 01","Tongkang","2011","Solar/Premium","230 KL","69 GT"]];
+              foreach ($arr as $key => $value) {
+                echo "
+                  <tr>
+                    <td>".($key+1)."</td>
+                    <td>".$value[0]."</td>
+                    <td>".$value[1]."</td>
+                    <td>".$value[2]."</td>
+                    <td>".$value[3]."</td>
+                    <td>".$value[4]."</td>
+                    <td>".$value[5]."</td>
+                  </tr>
+                ";
+              }
+                ?>
               </tbody>
             </table>
           </div>
