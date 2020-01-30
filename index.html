@@ -430,33 +430,45 @@
       </div>
     </section>
 
-    <section class="section is-danger" data-aos="zoom-in-up">
-      <div class="hero-head">
-        <div class="container has-text-centered">
-          <h1 class="title has-text-danger" id="partner">
-            Armada
-          </h1>
-          <h1 class="subtitle">
-            Kami sedang menjalani kemitraan dan memberikan pelayanan terbaik dengan perusahaan tingkat nasional
-          </h1>
-        </div>
-      </div>
+    <section class="hero is-medium is-info">
       <div class="hero-body">
-        <div class="container has-text-centered">
-          <a class="button is-danger has-shadow" id="armada">
-            Daftar Armada
-          </a>
+        <div class="container">
+          <div class="columns has-text-centered">
+            <div class="column has-text-centered" data-aos="fade-right">
+              <h2 class="title">
+                Armada
+              </h2>
+              <h2 class="is-size-6">
+                Menjadi perusahaan jasa transportir BBM Industri yang profesional, berkualitas, terdepan, dan terpercaya di Sumatera Selatan.
+              </h2>
+              <div style="margin-top: 2rem;">
+                <a class="button is-light has-shadow is-outlined" id="armada">
+                  Daftar Armada
+                </a>
+                <a class="button is-light has-shadow is-outlined" d id="armada-motor-sungai">
+                  Daftar Armada Motor Sungai
+                </a>
+              </div>
+            </div>
+            <div class="column has-text-centered" data-aos="fade-left">
+              <h2 class="title">
+                Customer
+              </h2>
+              <h2 class="is-size-6">
+                Menjadi perusahaan jasa transportir BBM Industri yang profesional, berkualitas, terdepan, dan terpercaya di Sumatera Selatan.
+              </h2>
+              <div style="margin-top: 2rem;">
+                <button disabled class="button is-light has-shadow is-outlined">
+                  Daftar Customer
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <script>
-      // $('#armada').click(function() {
-      //   $('.modal').addClass('is-active');
-      // });
-      // $('#modal-close').click(function() {
-      //   $('.modal').removeClass("is-active");
-      // })
       document.querySelector('#armada').addEventListener('click', function(event) {
         event.preventDefault();
         var modal = document.querySelector('.modal');  // assuming you have only 1
@@ -471,6 +483,39 @@
         });
       });
     </script>
+
+    <script>
+      document.querySelector('#armada-motor-sungai').addEventListener('click', function(event) {
+        event.preventDefault();
+        var modal = document.querySelector('.modal');  // assuming you have only 1
+        var html = document.querySelector('html');
+        modal.classList.add('is-active');
+        html.classList.add('is-clipped');
+
+        modal.querySelector('.modal-background').addEventListener('click', function(e) {
+          e.preventDefault();
+          modal.classList.remove('is-active');
+          html.classList.remove('is-clipped');
+        });
+      });
+    </script>
+
+    <script>
+      document.querySelector('#customer').addEventListener('click', function(event) {
+        event.preventDefault();
+        var modal = document.querySelector('.modal');  // assuming you have only 1
+        var html = document.querySelector('html');
+        modal.classList.add('is-active');
+        html.classList.add('is-clipped');
+
+        modal.querySelector('.modal-background').addEventListener('click', function(e) {
+          e.preventDefault();
+          modal.classList.remove('is-active');
+          html.classList.remove('is-clipped');
+        });
+      });
+    </script>
+
     <div class="modal animated fadeIn">
       <div class="modal-background"></div>
       <div class="modal-content">
@@ -530,8 +575,17 @@
           </div>
         </div>
       </div>
-      <button class="modal-close" id="modal-close"></button>
+      <button class="modal-close is-large" aria-label="close"></button>
     </div>
+
+    <script>
+      $('#armada').click(function() {
+        $('.modal').addClass('is-active');
+      });
+      $('.modal-close').click(function() {
+        $('.modal').removeClass("is-active");
+      })
+    </script>
 
     <!--  contact -->
     <section class="hero is-primary is-medium contact-has-bg-image" data-aos="zoom-in-up">
@@ -553,6 +607,9 @@
                   </span>
                 </div>
               </div>
+              <a class="button is-light has-shadow is-outlined is-medium">
+                Daftar Email
+              </a>
             </div>
           </div>
           <h2 class="subtitle">

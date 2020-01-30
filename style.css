@@ -14,18 +14,27 @@
   background-image: url('ship-1.jfif');
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  max-height: 400px;
 }
 
 .showcase-has-image-2 {
   background-image: url('ship-2.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  max-height: 400px;
 }
 
 .showcase-has-image-3 {
   background-image: url('ship-3.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  max-height: 400px;
 }
 
 .contact-has-bg-image {
